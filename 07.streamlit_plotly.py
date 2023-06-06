@@ -14,6 +14,7 @@ st.set_page_config(**PAGE_CONFIG)
 def main():
 
     st.title("Streamlit App. & Plotly.")
+    st.sidebar.success("Select a demo above.")
     with st.expander(label = "DataFrame - Accidentes Bicicletas 2021", expanded = False):
         df = pd.read_csv(filepath_or_buffer = "sources/AccidentesBicicletas_2021.csv", sep = ";")
         st.dataframe(df)
